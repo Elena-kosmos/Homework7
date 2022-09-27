@@ -6,9 +6,6 @@
 //8 4 2 4 -> 17 такого элемента нет
 
 
-// Random r = new Random();
-// r.Next(1,20);
-// Random.Shared.Next();
 
 int[,] CreateDoubleArrayTypeInt(int m, int n)
 {
@@ -33,23 +30,24 @@ void PrintDoubleArrayTypeInt(int[,] doubleArray)
     }
 }
 
-int[,] matrix = CreateDoubleArrayTypeInt(3,4);
-PrintDoubleArrayTypeInt(matrix);
 
 int[] GetResult(int[,] matrix, int row, int col)
 {
-    int[] result = new int[2];
-    if(row>=matrix.GetLength(0) || col>=matrix.GetLength(1))
-    {
-        return new int[]{-1,0};
-    }
-else
-{
-    return new int[] {1,matrix[row,col]};
-}
+    if(row<0
+        || col<0
+        || row>= matrix.GetLength(0)
+        || col>= matrix.GetLength(1)
+    )
+  return new int[]{-1,0};
     
-    return result;
+else
+
+    return new int[] {1,matrix[row,col]};
+    
 }
+
+int[,] matrix = CreateDoubleArrayTypeInt(3,4);
+PrintDoubleArrayTypeInt(matrix);
 
 int[] res = GetResult(matrix,2,1);
 Console.WriteLine(res[0]);
