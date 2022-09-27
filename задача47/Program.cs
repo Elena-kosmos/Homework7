@@ -6,10 +6,10 @@
 // 8, 7,8 -7,1 9
 
 Console.WriteLine("введите количество строк: ");
-int m =Convert.ToInt32(Console.ReadLine()); // получили строчку
+int m =Convert.ToInt32(Console.ReadLine()); 
 
 Console.WriteLine("введите количество столбцов: ");
-int n =Convert.ToInt32(Console.ReadLine()); // получили строчку
+int n =Convert.ToInt32(Console.ReadLine()); 
 
 Console.WriteLine($"m={m}, n={n}");
 double[,] array = new double[m,n];
